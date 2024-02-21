@@ -1,6 +1,7 @@
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { registerUseCase } from "@/use-cases/register";
+import { RegisterUseCase } from "@/use-cases/register";
+import { PrismaUsersRepository } from "@/repositories/prisma/prisma-users-repository";
 
 export async function registerController(app: FastifyInstance) {
   app.post("/", async (req, res) => {
@@ -13,15 +14,18 @@ export async function registerController(app: FastifyInstance) {
     const { name, email, password } = createUserBody.parse(req.body);
 
     try {
-      await registerUseCase({
+      const usersRepository = new PrismaUsersRepository();
+      const registerUseCase = new RegisterUseCase(usersRepository);
+
+      await registerUseCase.execute({
         name,
         email,
         password,
       });
-    } catch (e) {
+    } catch (err) {
       return res.status(409).send();
     }
 
-    return res.status(201).send("Usuário cadastrado com sucesso!");
+    return res.status(201).send();
   });
 }
