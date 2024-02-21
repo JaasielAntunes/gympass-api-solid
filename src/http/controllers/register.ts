@@ -2,7 +2,7 @@ import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { FastifyInstance } from "fastify";
 
-export async function usersRoutes(app: FastifyInstance) {
+export async function registerController(app: FastifyInstance) {
   app.post("/", async (req, res) => {
     const createUserBody = z.object({
       name: z.string().min(3),

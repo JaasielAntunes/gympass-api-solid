@@ -1,6 +1,6 @@
 import fastify from "fastify";
-import { usersRoutes } from "./routes/users";
+import { registerController } from "./http/controllers/register";
 
 export const app = fastify();
 
-app.register(usersRoutes, { prefix: "users" });
+app.register(registerController, { prefix: "users" });
