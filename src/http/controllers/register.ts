@@ -27,6 +27,8 @@ export async function registerController(app: FastifyInstance) {
       if (e instanceof UserAlreadyExistsError) {
         return res.status(409).send({ message: e.message });
       }
+
+      throw e;
     }
 
     return res.status(201).send();
