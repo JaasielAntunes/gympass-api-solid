@@ -32,7 +32,7 @@ describe("Caso de uso de cadastro", () => {
       password: "1234",
     });
 
-    expect(() =>
+    await expect(() =>
       registerUseCase.execute({
         name: "Carlos Alves",
         email,
