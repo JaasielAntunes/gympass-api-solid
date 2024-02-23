@@ -13,6 +13,8 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
     if (!checkInOnSameDate) {
       return null;
     }
+
+    return checkInOnSameDate;
   }
 
   async create(data: Prisma.CheckInUncheckedCreateInput) {
@@ -20,7 +22,7 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
       id: randomUUID(),
       user_id: data.user_id,
       gym_id: data.gym_id,
-      validated_at: data.validate_at ? new Date(data.validate_at) : null,
+      validate_at: data.validate_at ? new Date(data.validate_at) : null,
       created_at: new Date(),
     };
 
