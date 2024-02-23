@@ -29,7 +29,7 @@ describe("Caso de uso de autenticação", () => {
   });
 
   test("Não deve ser possível realizar autenticação com email inválido", async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         email: "carlos@example.com",
         password: "1234",
@@ -38,7 +38,7 @@ describe("Caso de uso de autenticação", () => {
   });
 
   test("Não deve ser possível realizar autenticação com senha inválida", async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         email: "carlos@example.com",
         password: "123456",

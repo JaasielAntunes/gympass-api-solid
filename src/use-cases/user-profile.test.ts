@@ -28,7 +28,7 @@ describe("Caso de uso de perfil do usuário", () => {
   });
 
   test("Não deve ser possível obter o perfil do usuário com id inválido", async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: "invalid-id",
       }),
