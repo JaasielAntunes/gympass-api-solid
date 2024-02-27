@@ -1,7 +1,7 @@
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
 import { UserAlreadyExistsError } from "@/use-cases/errors/user-alredy-exists";
-import { makeRegisterUserCase } from "@/use-cases/factories/make-register-user-case";
+import { makeRegisterUseCase } from "@/use-cases/factories/make-register-use-case";
 
 export async function registerController(app: FastifyInstance) {
   app.post("/", async (req, res) => {
@@ -14,7 +14,7 @@ export async function registerController(app: FastifyInstance) {
     const { name, email, password } = createUserBody.parse(req.body);
 
     try {
-      const registerUseCase = makeRegisterUserCase();
+      const registerUseCase = makeRegisterUseCase();
 
       await registerUseCase.execute({
         name,
