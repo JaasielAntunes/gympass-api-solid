@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Environment } from "vitest";
 
-export default <Environment><unknown>{
+export default <Environment>{
   name: "prisma",
   async setup() {
     console.log("setup");
@@ -12,4 +12,6 @@ export default <Environment><unknown>{
       },
     };
   },
+
+  transformMode: "web",
 };
