@@ -11,9 +11,9 @@ describe("Caso de uso de busca de academias", () => {
     sut = new SearchGymsUseCase(gymsRepository);
   });
 
-  test("Deve ser possível buscar por academias", async () => {
+  test("should be able to search for gyms", async () => {
     await gymsRepository.create({
-      title: "Node.js Gym",
+      title: "JavaScript Gym",
       description: null,
       phone: null,
       latitude: -27.2092052,
@@ -21,7 +21,7 @@ describe("Caso de uso de busca de academias", () => {
     });
 
     await gymsRepository.create({
-      title: "Java Gym",
+      title: "TypeScript Gym",
       description: null,
       phone: null,
       latitude: -27.2092052,
@@ -29,18 +29,20 @@ describe("Caso de uso de busca de academias", () => {
     });
 
     const { gyms } = await sut.execute({
-      search: "Java",
+      search: "JavaScript",
       page: 1,
     });
 
     expect(gyms).toHaveLength(1);
-    expect(gyms).toEqual([expect.objectContaining({ title: "Java Gym" })]);
+    expect(gyms).toEqual([
+      expect.objectContaining({ title: "JavaScript Gym" }),
+    ]);
   });
 
-  test.skip("Deve ser possível buscar academias com paginação", async () => {
+  test("should be able to fetch paginated gym search", async () => {
     for (let i = 1; i <= 22; i++) {
       await gymsRepository.create({
-        title: `Node.js Gym ${i}`,
+        title: `JavaScript Gym ${i}`,
         description: null,
         phone: null,
         latitude: -27.2092052,
@@ -49,14 +51,14 @@ describe("Caso de uso de busca de academias", () => {
     }
 
     const { gyms } = await sut.execute({
-      search: "Node.js",
+      search: "JavaScript",
       page: 2,
     });
 
     expect(gyms).toHaveLength(2);
     expect(gyms).toEqual([
-      expect.objectContaining({ gym_id: "Node.js 21" }),
-      expect.objectContaining({ gym_id: "Node.js 22" }),
+      expect.objectContaining({ title: "JavaScript Gym 21" }),
+      expect.objectContaining({ title: "JavaScript Gym 22" }),
     ]);
   });
 });
