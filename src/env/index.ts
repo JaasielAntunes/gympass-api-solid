@@ -6,6 +6,7 @@ process.env.NODE_ENV === "test" ? config({ path: ".env.test" }) : config();
 
 const envSchema = z.object({
   NODE_ENV: z.enum(["dev", "test", "production"]).default("dev"),
+  JWT_SECRET: z.string(),
   PORT: z.coerce.number().default(3333),
 });
 

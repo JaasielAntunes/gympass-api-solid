@@ -1,13 +1,17 @@
 import fastify from "fastify";
-import { registerController } from "./http/controllers/register";
 import { ZodError } from "zod";
 import { env } from "./env";
-import { authenticateController } from "./http/controllers/authenticate";
+import fastifyJwt from "@fastify/jwt";
+import { appRoutes } from "./http/routes";
 
 export const app = fastify();
 
-app.register(registerController, { prefix: "users" });
-app.register(authenticateController, { prefix: "sessions" });
+app.register(fastifyJwt, {
+  secret: env.JWT_SECRET,
+});
+
+app.register(appRoutes);
+
 app.setErrorHandler((error, req, res) => {
   if (error instanceof ZodError) {
     return res
