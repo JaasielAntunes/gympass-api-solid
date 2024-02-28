@@ -23,6 +23,12 @@ app.register(gymsRoutes);
 app.register(checkInsRoutes);
 
 app.setErrorHandler((error, req, res) => {
+  if (error.code === "FST_JWT_NO_AUTHORIZATION_IN_COOKIE") {
+    return res
+      .status(401)
+      .send({ message: "Invalid JWT token.", code: error.code });
+  }
+
   if (error instanceof ZodError) {
     return res
       .status(400)
