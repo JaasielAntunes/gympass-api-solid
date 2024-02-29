@@ -1,6 +1,6 @@
 import request from "supertest";
 import { app } from "@/app";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, test } from "vitest";
 import { createAndAuthenticateUser } from "@/utils/test/create-and-authenticate-user";
 import { prisma } from "@/lib/prisma";
 
@@ -13,8 +13,8 @@ describe("Validação de CheckIn (e2e)", () => {
     await app.close();
   });
 
-  it("Deve ser possível validar um checkin", async () => {
-    const { token } = await createAndAuthenticateUser(app);
+  test("Deve ser possível validar um checkin", async () => {
+    const { token } = await createAndAuthenticateUser(app, true);
 
     const user = await prisma.user.findFirstOrThrow();
 

@@ -11,7 +11,7 @@ export async function checkInsRoutes(app: FastifyInstance) {
 
   app.post("/gyms/:gymId/checkins", create);
   app.patch(
-    "/check-ins/:checkInId/validate",
+    "/checkins/:checkInId/validate",
     { onRequest: [verifyUserRole("ADMIN")] },
     validate,
   );
