@@ -28,5 +28,5 @@ export async function register(req: FastifyRequest, res: FastifyReply) {
     throw e;
   }
 
-  return res.status(201).send();
+  return res.status(201).send("Usuário cadastrado com sucesso!");
 }

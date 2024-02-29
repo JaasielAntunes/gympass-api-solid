@@ -28,5 +28,5 @@ export async function create(req: FastifyRequest, res: FastifyReply) {
     userLongitude: longitude,
   });
 
-  return res.status(201).send();
+  return res.status(201).send("CheckIn cadastrado com sucesso!");
 }
