@@ -54,6 +54,7 @@ Através das orientações do educador Diego Fernandes, consegui absorver vário
 - Fastify
 - Fastify JWT
 - Prisma
+- PostgreSQL
 - Zod
 - Docker
 - Typescript
