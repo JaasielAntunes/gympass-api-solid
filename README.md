@@ -19,15 +19,15 @@ Através das orientações do educador Diego Fernandes, consegui absorver vário
 ## 📝 Regras da aplicação
 
 - [X] Deve ser possível criar um usuário
-- [X] - Deve ser possível se autenticar
-- [X] - Deve ser possível obter o perfil de um usuário logado
-- [X] - Deve ser possível obter o número de check-ins realizados pelo usuário logado
-- [X] - Deve ser possível o usuário obter o seu histórico de check-ins
-- [X] - Deve ser possível o usuário buscar academias mais próximas (até 10km)
-- [X] - Deve ser possível o usuário buscar academias pelo nome
-- [X] - Deve ser possível o usuário realizar check-in em uma academia
-- [X] - Deve ser possível validar o check-in de um usuário
-- [X] - Deve ser possível cadastrar uma academia
+- [X] Deve ser possível se autenticar
+- [X] Deve ser possível obter o perfil de um usuário logado
+- [X] Deve ser possível obter o número de check-ins realizados pelo usuário logado
+- [X] Deve ser possível o usuário obter o seu histórico de check-ins
+- [X] Deve ser possível o usuário buscar academias mais próximas (até 10km)
+- [X] Deve ser possível o usuário buscar academias pelo nome
+- [X] Deve ser possível o usuário realizar check-in em uma academia
+- [X] Deve ser possível validar o check-in de um usuário
+- [X] Deve ser possível cadastrar uma academia
 
 ---
 
