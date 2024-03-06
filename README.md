@@ -11,7 +11,7 @@
 ## 📁 Sobre o projeto
 
 A aplicação desenvolvida consiste em uma API de gympass para academias e foi aplicada boas práticas de código limpo, padrão de arquitetura e de projeto, SOLID e testes.
-Foi de grande importância o desenvolvimento desta aplicação, pois o passo inicial para compreensão de conceitos fundamentais para me tornar um especialista em Node.Js.
+Foi de grande importância o desenvolvimento desta aplicação, pois foi o passo inicial para compreensão de conceitos fundamentais para me tornar um especialista em Node.Js.
 Através das orientações do educador Diego Fernandes, consegui absorver vários fundamentos da tecnologia Node.Js.
 
 ---
