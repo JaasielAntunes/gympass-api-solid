@@ -1,5 +1,5 @@
 <h1 align="center">
-  A API Gympass é uma aplicação back-end desenvolvida durante o aprendizado do módulo API Node.js da formação Node.js da Rocketseat.
+  A API Gympass é uma aplicação back-end desenvolvida durante o aprendizado do módulo API Node.js da formação Node.js da <a href="https://app.rocketseat.com.br/home">Rocketseat</a>.
 </h1>
 
 <p align="center">
