@@ -49,7 +49,7 @@ Através das orientações do educador Diego Fernandes, consegui absorver vário
 
 ---
 
-## 💻 Tecnologias utilizadas
+## 💻 Tecnologias
 
 - Fastify
 - Fastify JWT
