@@ -57,6 +57,7 @@ Através das orientações do educador Diego Fernandes, consegui absorver vário
 - PostgreSQL
 - Zod
 - Docker
+- JavaScript
 - Typescript
 - Dotenv
 - Dayjs
